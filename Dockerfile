@@ -18,6 +18,8 @@ RUN apt-get update --fix-missing && apt-get install -y --no-install-recommends \
   zip \
   zlib1g-dev
 
+RUN docker-php-ext-configure gd --with-freetype
+
 RUN docker-php-ext-install \
   bcmath \
   exif \
