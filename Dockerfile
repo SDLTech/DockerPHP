@@ -48,3 +48,13 @@ RUN apt-get install -y nodejs
 # Enable Apache mod_rewrite
 #
 RUN a2enmod rewrite
+
+#
+# Copy in the php.ini file
+#
+COPY php.ini "$PHP_INI_DIR/php.ini"
+
+#
+# Default workdir
+#
+WORKDIR /var/www/html
