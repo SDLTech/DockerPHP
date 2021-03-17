@@ -1,5 +1,8 @@
 FROM php:7.4-apache
 
+ENV COMPOSER_MEMORY_LIMIT=-1
+ENV TZ=Australia/Brisbane
+
 #
 # Dependencies for PHP and PHP extensions
 #
