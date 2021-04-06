@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Listen for XDebug on Docker App",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "externalConsole": false,
+      "pathMappings": {
+          "/var/www/html": "${workspaceFolder}"
+      },
+      "ignore": [
+        "${workspaceFolder}/vendor/**/*.php"
+      ],
+      "hostname": "localhost",
+    },
+  ]
+}
