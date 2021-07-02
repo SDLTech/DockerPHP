@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8-apache
 
 ENV COMPOSER_MEMORY_LIMIT=-1
 ENV TZ=Australia/Brisbane
@@ -50,13 +50,13 @@ RUN pecl install xdebug \
 # Install Composer (based off code from: https://getcomposer.org/download/)
 #
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-RUN php composer-setup.php --version=1.10.13 --filename=composer --install-dir=/usr/local/bin
+RUN php composer-setup.php --version=2.1.3 --filename=composer --install-dir=/usr/local/bin
 RUN php -r "unlink('composer-setup.php');"
 
 #
 # Install node and npm
 #
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 
 #
