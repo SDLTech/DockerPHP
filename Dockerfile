@@ -34,6 +34,9 @@ RUN docker-php-ext-install \
   pdo \
   zip
 
+RUN pecl install ast-1.0.14
+RUN docker-php-ext-enable ast
+
 #
 # Install Xdebug
 #
